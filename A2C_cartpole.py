@@ -70,7 +70,7 @@ model = DQN("MlpPolicy", env, verbose=1, tau=0.5, learning_starts=1000, buffer_s
 callback = SaveOnBestTrainingRewardCallback(check_freq=1000, log_dir=log_dir)
 # Train the agent
 timesteps = 1e6
-model.learn(total_timesteps=int(timesteps), callback=callback, progress_bar=True)
+model.learn(total_timesteps=int(timesteps), callback=callback)
 # Train the agent and display a progress bar
 # model.learn(total_timesteps=int(2e5), progress_bar=True)
 # Save the agent
